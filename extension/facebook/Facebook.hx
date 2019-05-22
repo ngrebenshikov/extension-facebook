@@ -97,7 +97,7 @@ class Facebook extends TaskExecutor {
 		#elseif (cpp || neko)
 
 		var appID = Sys.getEnv("FACEBOOK_APP_ID");
-		var redirectUri = "http://vmoura.dojo/ws_face_prueba";
+		var redirectUri = "https://www.facebook.com/connect/login_success.html";
 		var url = 'https://www.facebook.com/dialog/oauth?client_id=$appID&redirect_uri=$redirectUri';
 
 		Thread.create(function() {

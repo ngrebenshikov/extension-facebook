@@ -12,5 +12,5 @@
 
 @end
 
-@interface NMEAppDelegate : NSObject <UIApplicationDelegate>
+@interface SDLUIKitDelegate : NSObject <UIApplicationDelegate>
 @end

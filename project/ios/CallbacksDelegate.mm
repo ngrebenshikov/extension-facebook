@@ -6,7 +6,7 @@
 #import <FBSDKCoreKit/FBSDKApplicationDelegate.h>
 #import <UIKit/UIKit.h>
 
-@implementation NMEAppDelegate (CallbacksDelegate)
+@implementation SDLUIKitDelegate (CallbacksDelegate)
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 	NSLog(@"openURL");

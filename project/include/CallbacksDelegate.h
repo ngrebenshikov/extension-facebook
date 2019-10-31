@@ -12,5 +12,5 @@
 
 @end
 
-@interface SDLUIKitDelegate : NSObject <UIApplicationDelegate>
-@end
+// @interface SDLUIKitDelegate : NSObject <UIApplicationDelegate>
+// @end

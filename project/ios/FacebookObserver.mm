@@ -8,9 +8,13 @@
 - (void)observeTokenChange:(NSNotification *)notification {
 
 	if ([FBSDKAccessToken currentAccessToken]!=nil) {
-		extension_facebook::onTokenChange([[FBSDKAccessToken currentAccessToken].tokenString UTF8String]);
+		dispatch_async(dispatch_get_main_queue(), ^{	
+			extension_facebook::onTokenChange([[FBSDKAccessToken currentAccessToken].tokenString UTF8String]);
+		});
 	} else {
-		extension_facebook::onTokenChange("");
+		dispatch_async(dispatch_get_main_queue(), ^{	
+			extension_facebook::onTokenChange("");
+		});
 	}
 
 }

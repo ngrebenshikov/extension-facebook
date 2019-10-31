@@ -240,11 +240,13 @@ public class FacebookExtension extends Extension {
 	}
 
 	public static void logInWithPublishPermissions(String permissions) {
+		logout();
 		String[] arr = permissions.split(";");
 		LoginManager.getInstance().logInWithPublishPermissions(mainActivity, Arrays.asList(arr));
 	}
 
 	public static void logInWithReadPermissions(String permissions) {
+		logout();
 		String[] arr = permissions.split(";");
 		LoginManager.getInstance().logInWithReadPermissions(mainActivity, Arrays.asList(arr));
 	}

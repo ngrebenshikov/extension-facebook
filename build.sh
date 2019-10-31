@@ -5,7 +5,8 @@ PKG_NAME="extension-facebook"
 
 rm -rf project/obj
 lime rebuild . ios
+lime rebuild . ios -debug
 rm -rf project/obj
 
-rm -f "$PKG_NAME.zip"
-zip -r "$PKG_NAME.zip" extension haxelib.json include.xml project ndll dependencies frameworks template
+#rm -f "$PKG_NAME.zip"
+#zip -r "$PKG_NAME.zip" extension haxelib.json include.xml project ndll dependencies frameworks template

@@ -144,6 +144,7 @@ class Facebook extends TaskExecutor {
 	}
 
 	public function logout() {
+		accessToken = null;
 		#if (android || iphone)
 		FacebookCFFI.logout();
 		#end

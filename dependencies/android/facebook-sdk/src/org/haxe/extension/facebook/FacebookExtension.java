@@ -17,6 +17,7 @@ import com.facebook.HttpMethod;
 import com.facebook.internal.BundleJSONConverter;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
+import com.facebook.login.LoginBehavior;
 import com.facebook.share.model.AppInviteContent;
 import com.facebook.share.model.GameRequestContent.ActionType;
 import com.facebook.share.model.GameRequestContent;
@@ -65,6 +66,7 @@ public class FacebookExtension extends Extension {
 
 		callbackManager = CallbackManager.Factory.create();
 
+		LoginManager.getInstance().setLoginBehavior(LoginBehavior.WEB_ONLY);
 		LoginManager.getInstance().registerCallback(callbackManager,
 
 			new FacebookCallback<LoginResult>() {

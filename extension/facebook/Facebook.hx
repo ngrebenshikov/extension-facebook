@@ -144,10 +144,12 @@ class Facebook extends TaskExecutor {
 	}
 
 	public function logout() {
-		accessToken = null;
-		#if (android || iphone)
-		FacebookCFFI.logout();
-		#end
+		if (null != accessToken && "" != accessToken) {
+			accessToken = null;
+			#if (android || iphone)
+			FacebookCFFI.logout();
+			#end
+		}
 	}
 
 	function prependSlash(str : String) : String {
